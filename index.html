@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gopala's Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+<style>
+    /* Add some styles to make the page look nice */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .bg-image {
+      /* Add styles for the background image */
+      background: url('https://source.unsplash.com/random');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      margin: 0 auto;
+    }
+    .profile-picture img {
+      width: 100%;
+      height: auto;
+    }
+    .quote {
+      /* Add styles for the quote text */
+      height: inherit;
+      background: inherit;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: black;
+      font: 900 5vmin/5vh Sofia, cursive;
+      text-align: center;
+      filter: invert(1) grayscale(1) contrast(9) drop-shadow(.07em .07em #36454F);
+    }
+    .self_quote {
+      /* Add styles for the quote text */
+      height: inherit;
+      background: inherit;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: black;
+      font: 900 5vmin/5vh Sofia, cursive;
+      text-align: center;
+      filter: invert(1) grayscale(1) contrast(9) drop-shadow(.07em .07em #36454F);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: white;
+      font-size: 20px;
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      margin: 0 5px;
+    }
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+    .fa:hover {
+      opacity: 0.7;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    /* Add some styles for the popup contact form */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    .overlay.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .popup h2 {
+      margin-top: 0;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .popup .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      margin-bottom: 10px;
+    }
+    .form-control:focus {
+      outline: none;
+      background-color: #fff;
+    }
+    .form-button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-button:hover {
+      background-color: #666;
+    }
+    .form-button:active {
+      transform: scale(0.95);
+    }
+    .form-footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form-footer a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .form-footer a:hover {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<div class="profile-picture">
+<img src="../gs.jpg" alt="Gopala">
+</div>
+<p class="self_quote">Hello,<br><br>I’m Gopala Subramanium,<br>an accountant by profession, &#38;<br>a technology enthusiast by hobby.</p>
+
+<div class="quote">
+Live to make others live better...
+</div>
+<br><br>
+
+<center><button class="form-button" id="form-button">Contact Me</button></center>
+</div>
+
+<div class="overlay" id="overlay">
+<div class="popup" id="popup">
+<!----<h2>Contact Me</h2>---->
+<button class="close-button" id="form-close">&#x24E7;</button>
+<iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe" style="width:100%;" height="588.35px" frameborder="0"></iframe>
+</div>
+</div>
+
+<div class="social-icons">
+<a href="https://www.facebook.com/gopala.subramanium" class="fa fa-facebook"></a>
+<a href="https://twitter.com/sgopala" class="fa fa-twitter"></a>
+<a href="https://instagram.com/gopalas" class="fa fa-instagram"></a>
+<a href="https://linkedin.com/in/gopalasubramanium" class="fa fa-linkedin"></a>
+<a href="https://youtube.com/@sgopala" class="fa fa-youtube"></a>
+</div>
+
+<div class="bg-image" style="backgroundImage: url(https://source.unsplash.com/random)"></div>
+
+<script type="text/javascript">
+    // Update the quote every minute
+    setInterval(function() {
+      // Fetch a new quote from the internet
+      fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(data => {
+          // Update the quote on the page
+          document.querySelector('.quote').innerHTML = `"${data.content}" - ${data.author}`;
+        });
+    }, 60000);
+
+    // Update the background every minute
+    setInterval(function() {
+      // Fetch a new image from the internet
+      fetch('https://source.unsplash.com/random')
+        .then(response => response.url)
+        .then(url => {
+          // Update the background image on the page
+          document.querySelector('.bg-image').style.backgroundImage = `url(${url})`;
+        });
+    }, 60000);
+
+    // Add event listeners for form open and close
+    document.getElementById('form-button').addEventListener('click', function() {
+      document.getElementById('overlay').classList.add('active');
+    });
+
+    document.getElementById('form-close').addEventListener('click', function() {
+      document.getElementById('overlay').classList.remove('active');
+    });
+</script>
+</body>
+</html>

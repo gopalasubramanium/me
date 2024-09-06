@@ -33,7 +33,7 @@
     }
     .bg-image {
       /* Add styles for the background image */
-      background: url('../john-towner-JgOeRuGD_Y4-unsplash.jpg');
+      /*background: url('../john-towner-JgOeRuGD_Y4-unsplash.jpg');*/
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -249,7 +249,8 @@ Live to make others live better...
 <a href="https://youtube.com/@sgopala" class="fa fa-youtube"></a>
 </div>
 
-<div class="bg-image" style="backgroundImage: url(https://source.unsplash.com/random)"></div>
+<div class="bg-image"></div>
+<!--<div class="bg-image" style="backgroundImage: url(https://source.unsplash.com/random)"></div>-->
 
 <script type="text/javascript">
     // Update the quote every minute
@@ -283,5 +284,36 @@ Live to make others live better...
       document.getElementById('overlay').classList.remove('active');
     });
 </script>
+<script type="text/javascript">
+    // Unsplash API Access Key
+    const accessKey = 'fyUu_BzDUFtlt3v7aon56WCQDXM0JT0l86dvc4JC5lc'; // Replace with your Unsplash Access Key
+
+    // Fetch a random photo from Unsplash API
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch(`https://api.unsplash.com/photos/random?query=award-winning&client_id=${accessKey}`)
+        .then(response => response.json())
+        .then(data => {
+            const imageUrl = data.urls.full;
+            document.querySelector('.bg-image').style.backgroundImage = `url(${imageUrl})`;
+        })
+        .catch(error => {
+            console.error('Error fetching Unsplash image:', error);
+        });
+    });
+
+    // Optionally, update the background every 60 seconds with a new image
+    setInterval(function() {
+        fetch(`https://api.unsplash.com/photos/random?query=award-winning,nature,dark&client_id=${accessKey}`)
+        .then(response => response.json())
+        .then(data => {
+            const newImageUrl = data.urls.full;
+            document.querySelector('.bg-image').style.backgroundImage = `url(${newImageUrl})`;
+        })
+        .catch(error => {
+            console.error('Error fetching Unsplash image:', error);
+        });
+    }, 60000);
+</script>
+
 </body>
 </html>

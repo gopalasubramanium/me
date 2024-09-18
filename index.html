@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gopala's Page</title>
-<meta name="description" content="Discover the latest in Fintech Innovations and Next-Gen Asset Management with Gopala Subramanium, your trusted Singapore Financial Expert specializing in Blockchain Solutions and WealthTech Trends.">
-<meta name="keywords" content="Fintech Innovations 2024, Next-Gen Asset Management, Blockchain Solutions for Finance, WealthTech Trends, Singapore Financial Expert, Entrepreneurial Financial Strategies, Tech-Driven Insurance Solutions, Capital Markets Innovations, Sustainable Investment Solutions, Mutual Funds Digital Transformation, Gopala, Subramanium, Gopala Subramanium">
-<link rel="icon" sizes="16x16" href="../favicon/favicon-16x16.png" type="image/png">
-<link rel="icon" sizes="32x32" href="../favicon/favicon-32x32.png" type="image/png">
-<link rel="icon" sizes="48x48" href="../favicon/favicon-48x48.png" type="image/png">
-<link rel="icon" sizes="64x64" href="../favicon/favicon-64x64.png" type="image/png">
-<link rel="icon" sizes="128x128" href="../favicon/favicon-128x128.png" type="image/png">
-<link rel="icon" sizes="152x152" href="../favicon/favicon-152x152.png" type="image/png">
-<link rel="icon" sizes="180x180" href="../favicon/favicon-180x180.png" type="image/png">
-<link rel="apple-touch-icon" href="../favicon/favicon-180x180.png"> <!-- 180x180 for Apple devices -->
-<link rel="manifest" href="../manifest.json">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
-<style>
-    /* Add some styles to make the page look nice */
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gopala Subramanium</title>
+  <meta name="description" content="Discover the latest in Fintech Innovations and Next-Gen Asset Management with Gopala Subramanium, your trusted Singapore Financial Expert specializing in Blockchain Solutions and WealthTech Trends.">
+  <meta name="keywords" content="Fintech Innovations 2024, Next-Gen Asset Management, Blockchain Solutions for Finance, WealthTech Trends, Singapore Financial Expert, Entrepreneurial Financial Strategies, Tech-Driven Insurance Solutions, Capital Markets Innovations, Sustainable Investment Solutions, Mutual Funds Digital Transformation, Gopala, Subramanium, Gopala Subramanium">
+  <link rel="icon" href="../favicon/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon/favicon-180x180.png">
+  <link rel="manifest" href="../manifest.json">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: #f5f5f5;
       color: #333;
     }
     .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
     .bg-image {
-      /* Add styles for the background image */
-      /*background: url('../john-towner-JgOeRuGD_Y4-unsplash.jpg');*/
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: blur(8px);
+      filter: blur(5px);
       position: fixed;
       top: 0;
       left: 0;
@@ -50,87 +59,76 @@
       height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      display: block;
-      margin: 0 auto;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .profile-picture img {
       width: 100%;
       height: auto;
     }
-    .quote {
-      /* Add styles for the quote text */
-      height: inherit;
-      background: inherit;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: black;
-      font: 900 5vmin/5vh Sofia, cursive;
-      text-align: center;
-      filter: invert(1) grayscale(1) contrast(9) drop-shadow(.07em .07em #36454F);
+    .intro-text {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      color: #fff;
     }
-    .self_quote {
-      /* Add styles for the quote text */
-      height: inherit;
-      background: inherit;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: black;
-      font: 900 5vmin/5vh Sofia, cursive;
-      text-align: center;
-      filter: invert(1) grayscale(1) contrast(9) drop-shadow(.07em .07em #36454F);
+    .quote {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .button {
+      background-color: #007bb5;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+      min-width: 200px;
+    }
+    .button:hover {
+      background-color: #005f87;
     }
     .social-icons {
       display: flex;
       justify-content: center;
+      gap: 15px;
       margin-top: 20px;
     }
     .social-icons a {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      color: white;
+      color: #fff;
       font-size: 20px;
-      display: inline-block;
-      text-align: center;
-      line-height: 20px;
-      margin: 0 5px;
-    }
-    .fa {
-      padding: 20px;
-      font-size: 30px;
-      width: 50px;
-      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
       text-decoration: none;
-      margin: 5px 2px;
+      transition: opacity 0.3s;
     }
-    .fa:hover {
-      opacity: 0.7;
+    .social-icons a:hover {
+      opacity: 0.8;
     }
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-    .fa-twitter {
-      background: #55ACEE;
-      color: white;
-    }
-    .fa-google {
-      background: #dd4b39;
-      color: white;
-    }
-    .fa-linkedin {
-      background: #007bb5;
-      color: white;
-    }
-    .fa-youtube {
-      background: #bb0000;
-      color: white;
-    }
-    .fa-instagram {
-      background: #125688;
-      color: white;
-    }
-    /* Add some styles for the popup contact form */
+    .social-icons .fa-facebook { background-color: #3b5998; }
+    .social-icons .fa-twitter { background-color: #1da1f2; }
+    .social-icons .fa-linkedin { background-color: #0077b5; }
+    .social-icons .fa-youtube { background-color: #ff0000; }
+    .social-icons .fa-instagram { background-color: #e1306c; }
+    /* Overlay and Popup Styles */
     .overlay {
       position: fixed;
       top: 0;
@@ -141,7 +139,7 @@
       z-index: 9999;
       visibility: hidden;
       opacity: 0;
-      transition: all 0.5s ease;
+      transition: opacity 0.3s ease;
     }
     .overlay.active {
       visibility: visible;
@@ -153,167 +151,201 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      width: 400px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .popup h2 {
-      margin-top: 0;
-      font-size: 16px;
-      margin-bottom: 20px;
+      padding: 30px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
     .popup .close-button {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
       background: none;
       border: none;
       cursor: pointer;
+      color: #999;
+      transition: color 0.3s;
     }
-    .form-control {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-      border: none;
-      border-radius: 5px;
-      background-color: #f1f1f1;
-      margin-bottom: 10px;
+    .popup .close-button:hover {
+      color: #333;
     }
-    .form-control:focus {
-      outline: none;
-      background-color: #fff;
-    }
-    .form-button {
-      background-color: #333;
+    /* Duration Buttons */
+    .duration-button {
+      background-color: #007bb5;
       color: #fff;
       border: none;
-      padding: 10px;
-      font-size: 18px;
+      padding: 12px;
+      font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
+      margin: 10px 0;
+      width: 100%;
+      transition: background-color 0.3s;
     }
-    .form-button:hover {
-      background-color: #666;
+    .duration-button:hover {
+      background-color: #005f87;
     }
-    .form-button:active {
-      transform: scale(0.95);
+    .tidycal-iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
     }
-    .form-footer {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .form-footer a {
-      color: #333;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .form-footer a:hover {
-      color: #666;
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .intro-text {
+        font-size: 1em;
+      }
+      .quote {
+        font-size: 1.2em;
+      }
+      .button {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: unset;
+        width: 100%;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
-<div class="container">
+  <div class="bg-image" id="bg-image"></div>
+  <div class="bg-overlay"></div>
+  <div class="container">
+    <div class="profile-picture">
+      <img src="../gs.jpg" alt="Gopala Subramanium">
+    </div>
+    <p class="intro-text">
+      Hello,<br>
+      I’m <strong>Gopala Subramanium</strong>,<br>
+      an accountant by profession, and a technology enthusiast by hobby.
+    </p>
+    <p class="quote">
+      "Live to make others live better..."
+    </p>
+    <div class="buttons">
+      <a href="#" class="button" id="contact-button">Contact Me</a>
+      <a href="#" class="button" id="appointment-button">Book an Appointment</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/gopala.subramanium" class="fa fa-facebook" aria-label="Facebook"></a>
+      <a href="https://twitter.com/sgopala" class="fa fa-twitter" aria-label="Twitter"></a>
+      <a href="https://linkedin.com/in/gopalasubramanium" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+      <a href="https://youtube.com/@sgopala" class="fa fa-youtube" aria-label="YouTube"></a>
+      <a href="https://instagram.com/gopalas" class="fa fa-instagram" aria-label="Instagram"></a>
+    </div>
+  </div>
 
-<div class="profile-picture">
-<img src="../gs.jpg" alt="Gopala">
-</div>
-<p class="self_quote">Hello,<br><br>I’m Gopala Subramanium,<br>an accountant by profession, &#38;<br>a technology enthusiast by hobby.</p>
+  <!-- Contact Me Popup -->
+  <div class="overlay" id="contact-overlay">
+    <div class="popup" id="contact-popup">
+      <button class="close-button" id="contact-close-button" aria-label="Close">&times;</button>
+      <iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe" style="width:100%;" height="600px" frameborder="0"></iframe>
+    </div>
+  </div>
 
-<div class="quote">
-Live to make others live better...
-</div>
-<br><br>
+  <!-- Book an Appointment Popup -->
+  <div class="overlay" id="appointment-overlay">
+    <div class="popup" id="appointment-popup">
+      <button class="close-button" id="appointment-close-button" aria-label="Close">&times;</button>
+      <div id="appointment-content">
+        <!-- Initial content: Duration selection -->
+        <h2>Select Appointment Duration</h2>
+        <button class="duration-button" data-duration="15">15 Minutes</button>
+        <button class="duration-button" data-duration="30">30 Minutes</button>
+        <button class="duration-button" data-duration="60">60 Minutes</button>
+      </div>
+    </div>
+  </div>
 
-<center><button class="form-button" id="form-button">Contact Me</button></center>
-</div>
-
-<div class="overlay" id="overlay">
-<div class="popup" id="popup">
-<!----<h2>Contact Me</h2>---->
-<button class="close-button" id="form-close">&#x24E7;</button>
-<iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe" style="width:100%;" height="588.35px" frameborder="0"></iframe>
-</div>
-</div>
-
-<div class="social-icons">
-<a href="https://www.facebook.com/gopala.subramanium" class="fa fa-facebook"></a>
-<a href="https://twitter.com/sgopala" class="fa fa-twitter"></a>
-<a href="https://instagram.com/gopalas" class="fa fa-instagram"></a>
-<a href="https://linkedin.com/in/gopalasubramanium" class="fa fa-linkedin"></a>
-<a href="https://youtube.com/@sgopala" class="fa fa-youtube"></a>
-</div>
-
-<div class="bg-image"></div>
-<!--<div class="bg-image" style="backgroundImage: url(https://source.unsplash.com/random)"></div>-->
-
-<script type="text/javascript">
-    // Update the quote every minute
-    setInterval(function() {
-      // Fetch a new quote from the internet
+  <!-- Scripts -->
+  <script>
+    // Fetch and update the quote
+    function updateQuote() {
       fetch('https://api.quotable.io/random')
         .then(response => response.json())
         .then(data => {
-          // Update the quote on the page
           document.querySelector('.quote').innerHTML = `"${data.content}" - ${data.author}`;
-        });
-    }, 60000);
+        })
+        .catch(error => console.error('Error fetching quote:', error));
+    }
 
-    // Update the background every minute
-    setInterval(function() {
-      // Fetch a new image from the internet
-      fetch('https://source.unsplash.com/random')
-        .then(response => response.url)
-        .then(url => {
-          // Update the background image on the page
-          document.querySelector('.bg-image').style.backgroundImage = `url(${url})`;
-        });
-    }, 60000);
+    // Fetch and update the background image using Picsum Photos
+    function updateBackgroundImage() {
+      const imageUrl = 'https://picsum.photos/1920/1080?random=' + Math.floor(Math.random() * 1000);
+      document.getElementById('bg-image').style.backgroundImage = `url(${imageUrl})`;
+    }
 
-    // Add event listeners for form open and close
-    document.getElementById('form-button').addEventListener('click', function() {
-      document.getElementById('overlay').classList.add('active');
-    });
-
-    document.getElementById('form-close').addEventListener('click', function() {
-      document.getElementById('overlay').classList.remove('active');
-    });
-</script>
-<script type="text/javascript">
-    // Unsplash API Access Key
-    const accessKey = 'fyUu_BzDUFtlt3v7aon56WCQDXM0JT0l86dvc4JC5lc'; // Replace with your Unsplash Access Key
-
-    // Fetch a random photo from Unsplash API
+    // Initialize content on page load
     document.addEventListener('DOMContentLoaded', function() {
-        fetch(`https://api.unsplash.com/photos/random?query=award-winning&client_id=${accessKey}`)
-        .then(response => response.json())
-        .then(data => {
-            const imageUrl = data.urls.full;
-            document.querySelector('.bg-image').style.backgroundImage = `url(${imageUrl})`;
-        })
-        .catch(error => {
-            console.error('Error fetching Unsplash image:', error);
-        });
+      updateQuote();
+      updateBackgroundImage();
+      setInterval(updateQuote, 60000);
+      setInterval(updateBackgroundImage, 60000);
     });
 
-    // Optionally, update the background every 60 seconds with a new image
-    setInterval(function() {
-        fetch(`https://api.unsplash.com/photos/random?query=award-winning,nature,dark&client_id=${accessKey}`)
-        .then(response => response.json())
-        .then(data => {
-            const newImageUrl = data.urls.full;
-            document.querySelector('.bg-image').style.backgroundImage = `url(${newImageUrl})`;
-        })
-        .catch(error => {
-            console.error('Error fetching Unsplash image:', error);
-        });
-    }, 60000);
-</script>
+    // Event listeners for "Contact Me" form open and close
+    document.getElementById('contact-button').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('contact-overlay').classList.add('active');
+    });
 
+    document.getElementById('contact-close-button').addEventListener('click', function() {
+      document.getElementById('contact-overlay').classList.remove('active');
+    });
+
+    // Event listeners for "Book an Appointment" form open and close
+    document.getElementById('appointment-button').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('appointment-overlay').classList.add('active');
+    });
+
+    document.getElementById('appointment-close-button').addEventListener('click', function() {
+      document.getElementById('appointment-overlay').classList.remove('active');
+      // Reset the appointment content to duration selection when closed
+      resetAppointmentContent();
+    });
+
+    // Function to reset appointment content to initial state
+    function resetAppointmentContent() {
+      const appointmentContent = document.getElementById('appointment-content');
+      appointmentContent.innerHTML = `
+        <h2>Select Appointment Duration</h2>
+        <button class="duration-button" data-duration="15">15 Minutes</button>
+        <button class="duration-button" data-duration="30">30 Minutes</button>
+        <button class="duration-button" data-duration="60">60 Minutes</button>
+      `;
+      addDurationButtonListeners();
+    }
+
+    // Function to add event listeners to duration buttons
+    function addDurationButtonListeners() {
+      const durationButtons = document.querySelectorAll('.duration-button');
+      durationButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          const duration = button.getAttribute('data-duration');
+          loadTidycalEmbed(duration);
+        });
+      });
+    }
+
+    // Function to load TidyCal embed based on selected duration
+    function loadTidycalEmbed(duration) {
+      const appointmentContent = document.getElementById('appointment-content');
+      appointmentContent.innerHTML = `
+        <iframe class="tidycal-iframe" src="https://tidycal.com/sgopala/${duration}-minute-meeting"></iframe>
+      `;
+    }
+
+    // Initialize duration button listeners
+    addDurationButtonListeners();
+  </script>
 </body>
 </html>

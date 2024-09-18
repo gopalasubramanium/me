@@ -21,18 +21,17 @@
       padding: 0;
       background-color: #f5f5f5;
       color: #333;
+      overflow: hidden; /* Prevent body scroll */
     }
     .container {
-      height: 100vh; /* Changed from min-height to height */
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 20px; /* Reduced padding */
+      padding: 20px;
       text-align: center;
       position: relative;
       z-index: 1;
-      overflow: hidden; /* Hide overflow */
     }
     .bg-overlay {
       position: fixed;
@@ -55,12 +54,18 @@
       height: 100%;
       z-index: -1;
     }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .profile-picture {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin: 0 auto 10px auto;
       border: 4px solid #fff;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       flex-shrink: 0;
@@ -70,39 +75,40 @@
       height: auto;
     }
     .intro-text {
-      font-size: 1.2em;
-      line-height: 1.5;
-      margin-bottom: 20px; /* Reduced margin */
+      font-size: 1em;
+      line-height: 1.3;
+      margin-bottom: 15px;
       color: #fff;
       flex-shrink: 0;
     }
     .quote {
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: 600;
       color: #fff;
-      margin-bottom: 30px; /* Reduced margin */
+      margin-bottom: 20px;
       flex-shrink: 0;
     }
     .buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 20px; /* Reduced margin */
+      gap: 10px;
+      margin-bottom: 20px;
       flex-shrink: 0;
     }
     .button {
       background-color: #007bb5;
       color: #fff;
       border: none;
-      padding: 15px 30px;
-      font-size: 16px;
+      padding: 12px 20px;
+      font-size: 14px;
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       transition: background-color 0.3s;
-      min-width: 200px;
+      flex: 1;
+      max-width: 200px;
     }
     .button:hover {
       background-color: #005f87;
@@ -110,18 +116,19 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: auto; /* Push social icons to the bottom */
-      padding-bottom: 20px; /* Add padding at the bottom */
+      gap: 10px;
+      margin-top: auto;
+      padding-bottom: 10px;
+      flex-shrink: 0;
     }
     .social-icons a {
       color: #fff;
-      font-size: 20px;
+      font-size: 16px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       text-decoration: none;
       transition: opacity 0.3s;
@@ -201,27 +208,33 @@
       border: none;
     }
     /* Responsive Design */
-    @media (max-width: 600px) {
+    @media (min-height: 700px) {
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+      }
       .intro-text {
-        font-size: 1em;
+        font-size: 1.2em;
+        margin-bottom: 20px;
       }
       .quote {
-        font-size: 1.2em;
+        font-size: 1.5em;
+        margin-bottom: 30px;
       }
       .button {
-        padding: 12px 20px;
-        font-size: 14px;
-        min-width: unset;
-        width: 100%;
+        padding: 15px 30px;
+        font-size: 16px;
       }
-      .buttons {
-        flex-direction: column;
-        gap: 10px;
+      .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
       }
-      .container {
-        padding: 10px; /* Reduced padding on mobile */
-        overflow-y: auto; /* Allow scrolling if content overflows */
-      }
+    }
+    /* Hide scrollbars */
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
     }
   </style>
 </head>
@@ -229,20 +242,22 @@
   <div class="bg-image" id="bg-image"></div>
   <div class="bg-overlay"></div>
   <div class="container">
-    <div class="profile-picture">
-      <img src="../gs.jpg" alt="Gopala Subramanium">
-    </div>
-    <p class="intro-text">
-      Hello,<br>
-      I’m <strong>Gopala Subramanium</strong>,<br>
-      an accountant by profession, and a technology enthusiast by hobby.
-    </p>
-    <p class="quote">
-      "Live to make others live better..."
-    </p>
-    <div class="buttons">
-      <a href="#" class="button" id="contact-button">Contact Me</a>
-      <a href="#" class="button" id="appointment-button">Book an Appointment</a>
+    <div class="content">
+      <div class="profile-picture">
+        <img src="../gs.jpg" alt="Gopala Subramanium">
+      </div>
+      <p class="intro-text">
+        Hello,<br>
+        I’m <strong>Gopala Subramanium</strong>,<br>
+        an accountant by profession, and a technology enthusiast by hobby.
+      </p>
+      <p class="quote">
+        "Live to make others live better..."
+      </p>
+      <div class="buttons">
+        <a href="#" class="button" id="contact-button">Contact Me</a>
+        <a href="#" class="button" id="appointment-button">Book an Appointment</a>
+      </div>
     </div>
     <div class="social-icons">
       <a href="https://www.facebook.com/gopala.subramanium" class="fa fa-facebook" aria-label="Facebook"></a>

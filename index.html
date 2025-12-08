@@ -1,361 +1,1060 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gopala Subramanium</title>
-  <meta name="description" content="Discover the latest in Fintech Innovations and Next-Gen Asset Management with Gopala Subramanium, your trusted Singapore Financial Expert specializing in Blockchain Solutions and WealthTech Trends.">
-  <meta name="keywords" content="Fintech Innovations 2024, Next-Gen Asset Management, Blockchain Solutions for Finance, WealthTech Trends, Singapore Financial Expert, Entrepreneurial Financial Strategies, Tech-Driven Insurance Solutions, Capital Markets Innovations, Sustainable Investment Solutions, Mutual Funds Digital Transformation, Gopala, Subramanium, Gopala Subramanium">
-  <link rel="icon" href="../favicon/favicon-32x32.png" type="image/png">
-  <link rel="apple-touch-icon" href="../favicon/favicon-180x180.png">
-  <link rel="manifest" href="../manifest.json">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    .container {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      overflow-y: auto;
-    }
-    .bg-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-    .bg-image {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      filter: blur(5px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-    .content {
-      padding: 20px;
-    }
-    .profile-picture {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 10px auto;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .profile-picture img {
-      width: 100%;
-      height: auto;
-    }
-    .intro-text {
-      font-size: 1em;
-      line-height: 1.3;
-      margin-bottom: 15px;
-      color: #fff;
-    }
-    .quote {
-      font-size: 1.2em;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .button {
-      background-color: #007bb5;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      font-size: 14px;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
-      flex: 1;
-      max-width: 200px;
-    }
-    .button:hover {
-      background-color: #005f87;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding-bottom: 10px;
-    }
-    .social-icons a {
-      color: #fff;
-      font-size: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-    .social-icons a:hover {
-      opacity: 0.8;
-    }
-    .social-icons .fa-facebook { background-color: #3b5998; }
-    .social-icons .fa-twitter { background-color: #1da1f2; }
-    .social-icons .fa-linkedin { background-color: #0077b5; }
-    .social-icons .fa-youtube { background-color: #ff0000; }
-    .social-icons .fa-instagram { background-color: #e1306c; }
-    /* Overlay and Popup Styles */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0,0,0,0.7);
-      z-index: 9999;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .overlay.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .popup {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 600px;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    }
-    .popup .close-button {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      font-size: 24px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #999;
-      transition: color 0.3s;
-    }
-    .popup .close-button:hover {
-      color: #333;
-    }
-    /* Duration Buttons */
-    .duration-button {
-      background-color: #007bb5;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px 0;
-      width: 100%;
-      transition: background-color 0.3s;
-    }
-    .duration-button:hover {
-      background-color: #005f87;
-    }
-    .tidycal-iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-    }
-    /* Responsive Design */
-    @media (min-height: 700px) {
-      .profile-picture {
-        width: 150px;
-        height: 150px;
-      }
-      .intro-text {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-      }
-      .quote {
-        font-size: 1.5em;
-        margin-bottom: 30px;
-      }
-      .button {
-        padding: 15px 30px;
-        font-size: 16px;
-      }
-      .social-icons a {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-      }
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Gopala Subramanium — Capital Markets Visionary</title>
+    <meta name="description" content="CEO at Contemi CMS. 20+ years transforming fintech. Led Religare IPO (160× oversubscribed). FinTech CFO of the Year 2019.">
+    <meta name="keywords" content="Gopala Subramanium, CEO Contemi, NOVA Post-Trade+, Capital Markets, Singapore, FinTech Innovation">
+    
+    <!-- Favicons -->
+    <link rel="icon" href="../favicon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="../favicon/favicon-180x180.png">
+    <link rel="manifest" href="../manifest.json">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base */
+        html, body {
+            height: 100%;
+            min-height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Background System */
+        .universe {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .universe__image {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px) brightness(0.3);
+            transform: scale(1.1);
+            transition: opacity 2s ease;
+        }
+
+        .universe__dust {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            opacity: 0.92;
+        }
+
+        .universe__stars {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, white, transparent),
+                radial-gradient(2px 2px at 60% 70%, white, transparent),
+                radial-gradient(1px 1px at 50% 50%, white, transparent);
+            background-size: 200px 200px;
+            animation: drift 120s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes drift {
+            from { transform: translateX(0); }
+            to { transform: translateX(200px); }
+        }
+
+        /* Main Layout */
+        .stage {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            color: #ffffff;
+        }
+
+        /* Header Bar */
+        .apex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+            flex-shrink: 0;
+        }
+
+        .apex__identity {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .apex__avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.2);
+            flex-shrink: 0;
+        }
+
+        .apex__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .apex__credentials {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .apex__name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .apex__role {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 300;
+        }
+
+        .apex__metrics {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric__value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .metric__label {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.4);
+            margin-top: 2px;
+        }
+
+        /* Core Content */
+        .core {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .core__content {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .core__headline {
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: ascend 1s ease forwards;
+        }
+
+        @keyframes ascend {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .core__headline em {
+            font-style: italic;
+            color: #ffd700;
+            font-weight: 400;
+        }
+
+        .core__subtext {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            animation: ascend 1s ease 0.2s forwards;
+        }
+
+        .core__badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: ascend 1s ease 0.3s forwards;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .badge--gold {
+            background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1));
+            border-color: rgba(255,215,0,0.4);
+            color: #ffd700;
+        }
+
+        /* Action Buttons */
+        .core__actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            opacity: 0;
+            animation: ascend 1s ease 0.4s forwards;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: 0.01em;
+        }
+
+        .btn--primary {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn--primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+        }
+
+        .btn--ghost {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn--ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        /* Foundation (Footer) */
+        .foundation {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+            flex-shrink: 0;
+        }
+
+        .foundation__links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .foundation__link {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .foundation__link:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        /* Social Media Brand Colors */
+        .foundation__link--linkedin {
+            background-color: #0077b5;
+        }
+
+        .foundation__link--twitter {
+            background-color: #1da1f2;
+        }
+
+        .foundation__link--facebook {
+            background-color: #3b5998;
+        }
+
+        .foundation__link--youtube {
+            background-color: #ff0000;
+        }
+
+        .foundation__link--instagram {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
+
+        .foundation__wisdom {
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            font-size: 0.9375rem;
+            color: rgba(255,255,255,0.5);
+            max-width: 400px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .foundation__credits {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+        }
+
+        /* Modal System */
+        .portal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(20px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .portal--active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .portal__box {
+            background: #ffffff;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow: hidden;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .portal--active .portal__box {
+            transform: scale(1);
+        }
+
+        .portal__header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .portal__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .portal__close {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .portal__close:hover {
+            background: #e5e5e5;
+            transform: rotate(90deg);
+        }
+
+        .portal__body {
+            padding: 1.5rem;
+            max-height: calc(85vh - 80px);
+            overflow-y: auto;
+        }
+
+        /* Meeting Duration Cards */
+        .duration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .duration-option {
+            padding: 2rem 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .duration-option:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(102,126,234,0.4);
+        }
+
+        .duration-option__value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .duration-option__unit {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design (width-based) */
+        @media (max-width: 1200px) {
+            .apex__metrics {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .apex {
+                padding: 1rem;
+            }
+
+            .apex__identity {
+                gap: 0.75rem;
+            }
+
+            .apex__avatar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .apex__name {
+                font-size: 1rem;
+            }
+
+            .apex__role {
+                font-size: 0.75rem;
+            }
+
+            .core {
+                padding: 1rem;
+            }
+
+            .core__headline {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .core__subtext {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .core__badges {
+                display: none;
+            }
+
+            .core__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .foundation {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .foundation__links {
+                gap: 0.5rem;
+            }
+
+            .foundation__link {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .foundation__wisdom,
+            .foundation__credits {
+                display: none;
+            }
+
+            .duration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portal__box {
+                width: 95%;
+                border-radius: 12px;
+            }
+        }
+
+        /* Height-based tweaks to minimise scrolling on laptops */
+        @media (max-height: 900px) {
+            .apex {
+                padding: 1rem 1.5rem;
+            }
+
+            .core {
+                padding: 1.5rem 1.5rem;
+            }
+
+            .foundation {
+                padding: 1rem 1.5rem;
+            }
+
+            .core__headline {
+                font-size: clamp(2.2rem, 6vw, 3.2rem);
+                margin-bottom: 1.1rem;
+            }
+
+            .core__subtext {
+                margin-bottom: 1.25rem;
+            }
+
+            .core__badges {
+                margin-bottom: 1.75rem;
+            }
+        }
+
+        @media (max-height: 800px) {
+            .apex {
+                padding: 0.9rem 1.25rem;
+            }
+
+            .core {
+                padding: 1.25rem 1.25rem;
+            }
+
+            .foundation {
+                padding: 0.9rem 1.25rem;
+            }
+
+            .core__headline {
+                font-size: clamp(2rem, 5vw, 2.8rem);
+                margin-bottom: 0.9rem;
+            }
+
+            .core__subtext {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .core__badges {
+                display: none;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .apex {
+                padding: 0.75rem 1.5rem;
+            }
+
+            .core__headline {
+                font-size: 2rem;
+            }
+
+            .core__subtext {
+                display: none;
+            }
+
+            .foundation {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        *:focus-visible {
+            outline: 2px solid #ffd700;
+            outline-offset: 2px;
+        }
+
+        /* Loading State */
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        .portal__body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .portal__body::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+
+        .portal__body::-webkit-scrollbar-thumb {
+            background: #d0d0d0;
+            border-radius: 4px;
+        }
+
+        .portal__body::-webkit-scrollbar-thumb:hover {
+            background: #b0b0b0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .universe, .btn, .foundation__links {
+                display: none;
+            }
+
+            .stage {
+                min-height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="bg-image" id="bg-image"></div>
-  <div class="bg-overlay"></div>
-  <div class="container">
-    <div class="content">
-      <div class="profile-picture">
-        <img src="../gs.jpg" alt="Gopala Subramanium">
-      </div>
-      <p class="intro-text">
-        Hello,<br>
-        I’m <strong>Gopala Subramanium</strong>,<br>
-        an accountant by profession, and a technology enthusiast by hobby.
-      </p>
-      <p class="quote">
-        "Live to make others live better..."
-      </p>
-      <div class="buttons">
-        <a href="#" class="button" id="contact-button">Contact Me</a>
-        <a href="#" class="button" id="appointment-button">Book an Appointment</a>
-      </div>
+    <!-- Background Universe -->
+    <div class="universe">
+        <div class="universe__image" id="background-image"></div>
+        <div class="universe__dust"></div>
+        <div class="universe__stars"></div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/gopala.subramanium" class="fa fa-facebook" aria-label="Facebook"></a>
-      <a href="https://twitter.com/sgopala" class="fa fa-twitter" aria-label="Twitter"></a>
-      <a href="https://linkedin.com/in/gopalasubramanium" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-      <a href="https://youtube.com/@sgopala" class="fa fa-youtube" aria-label="YouTube"></a>
-      <a href="https://instagram.com/gopalas" class="fa fa-instagram" aria-label="Instagram"></a>
+
+    <!-- Main Stage -->
+    <div class="stage">
+        <!-- Header -->
+        <header class="apex">
+            <div class="apex__identity">
+                <div class="apex__avatar">
+                    <img src="../gs.jpg" alt="Gopala Subramanium" width="48" height="48">
+                </div>
+                <div class="apex__credentials">
+                    <div class="apex__name">Gopala Subramanium</div>
+                    <div class="apex__role">CEO, Contemi Capital Markets</div>
+                </div>
+            </div>
+            <div class="apex__metrics">
+                <div class="metric">
+                    <div class="metric__value">20+</div>
+                    <div class="metric__label">Years</div>
+                </div>
+                <div class="metric">
+                    <div class="metric__value">160×</div>
+                    <div class="metric__label">IPO Success</div>
+                </div>
+                <div class="metric">
+                    <div class="metric__value">12×</div>
+                    <div class="metric__label">EBITDA</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Core Content -->
+        <main class="core">
+            <div class="core__content">
+                <h1 class="core__headline">
+                    Transforming <em>capital markets</em><br>
+                    through technology &amp; vision
+                </h1>
+                
+                <p class="core__subtext">
+                    Leading NOVA Post-Trade+ globally. Turned three loss-making businesses 
+                    into profit engines. Architecting the future of financial infrastructure
+                    across SEA, ANZ, and Europe.
+                </p>
+
+                <div class="core__badges">
+                    <span class="badge badge--gold">🏆 FinTech CFO of the Year 2019</span>
+                    <span class="badge">IIM Calcutta</span>
+                    <span class="badge">Executive MBA</span>
+                </div>
+
+                <div class="core__actions">
+                    <button class="btn btn--primary" id="connect-btn">
+                        <i class="fas fa-envelope"></i>
+                        Connect
+                    </button>
+                    <button class="btn btn--ghost" id="schedule-btn">
+                        <i class="fas fa-calendar"></i>
+                        Schedule Time
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="foundation">
+            <div class="foundation__links">
+                <a href="https://linkedin.com/in/gopalasubramanium" class="foundation__link foundation__link--linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/sgopala" class="foundation__link foundation__link--twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/gopala.subramanium" class="foundation__link foundation__link--facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://youtube.com/@sgopala" class="foundation__link foundation__link--youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com/gopalas" class="foundation__link foundation__link--instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="foundation__wisdom" id="wisdom-quote">
+                "Live to make others live better..."
+            </div>
+
+            <div class="foundation__credits">
+                <span>Singapore • Chennai</span>
+                <!--<span>mailme@sgopala.com</span>-->
+            </div>
+        </footer>
     </div>
-  </div>
 
-  <!-- Contact Me Popup -->
-  <div class="overlay" id="contact-overlay">
-    <div class="popup" id="contact-popup">
-      <button class="close-button" id="contact-close-button" aria-label="Close">&times;</button>
-      <iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe" style="width:100%;" height="600px" frameborder="0"></iframe>
+    <!-- Contact Portal -->
+    <div class="portal" id="contact-portal">
+        <div class="portal__box">
+            <div class="portal__header">
+                <h2 class="portal__title">Let's Connect</h2>
+                <button class="portal__close" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="portal__body">
+                <iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe" 
+                        style="width:100%; height:500px; border:none;" 
+                        frameborder="0"></iframe>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Book an Appointment Popup -->
-  <div class="overlay" id="appointment-overlay">
-    <div class="popup" id="appointment-popup">
-      <button class="close-button" id="appointment-close-button" aria-label="Close">&times;</button>
-      <div id="appointment-content">
-        <!-- Initial content: Duration selection -->
-        <h2>Select Appointment Duration</h2>
-        <button class="duration-button" data-duration="15">15 Minutes</button>
-        <button class="duration-button" data-duration="30">30 Minutes</button>
-        <button class="duration-button" data-duration="60">60 Minutes</button>
-      </div>
+    <!-- Schedule Portal -->
+    <div class="portal" id="schedule-portal">
+        <div class="portal__box">
+            <div class="portal__header">
+                <h2 class="portal__title">Schedule a Meeting</h2>
+                <button class="portal__close" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="portal__body" id="schedule-content">
+                <div class="duration-grid">
+                    <div class="duration-option" data-duration="15">
+                        <div class="duration-option__value">15</div>
+                        <div class="duration-option__unit">minutes</div>
+                    </div>
+                    <div class="duration-option" data-duration="30">
+                        <div class="duration-option__value">30</div>
+                        <div class="duration-option__unit">minutes</div>
+                    </div>
+                    <div class="duration-option" data-duration="60">
+                        <div class="duration-option__value">60</div>
+                        <div class="duration-option__unit">minutes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Scripts -->
-  <script>
-    // Fetch and update the quote
-    function updateQuote() {
-      fetch('https://api.quotable.io/random')
-        .then(response => response.json())
-        .then(data => {
-          document.querySelector('.quote').innerHTML = `"${data.content}" - ${data.author}`;
-        })
-        .catch(error => console.error('Error fetching quote:', error));
-    }
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Initialization
+        class Portfolio {
+            constructor() {
+                this.init();
+            }
 
-    // Fetch and update the background image using Picsum Photos
-    function updateBackgroundImage() {
-      const imageUrl = 'https://picsum.photos/1920/1080?random=' + Math.floor(Math.random() * 1000);
-      document.getElementById('bg-image').style.backgroundImage = `url(${imageUrl})`;
-    }
+            init() {
+                this.setupBackground();
+                this.setupQuotes();
+                this.setupPortals();
+                this.startIntervals();
+            }
 
-    // Initialize content on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      updateQuote();
-      updateBackgroundImage();
-      setInterval(updateQuote, 60000);
-      setInterval(updateBackgroundImage, 60000);
-    });
+            // Background Management
+            setupBackground() {
+                this.updateBackground();
+            }
 
-    // Event listeners for "Contact Me" form open and close
-    document.getElementById('contact-button').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('contact-overlay').classList.add('active');
-    });
+            updateBackground() {
+                const bgElement = document.getElementById('background-image');
+                const seed = Date.now();
+                const imageUrl = `https://picsum.photos/1920/1080?random=${seed}`;
+                
+                // Smooth transition
+                bgElement.style.opacity = '0';
+                
+                const img = new Image();
+                img.onload = () => {
+                    setTimeout(() => {
+                        bgElement.style.backgroundImage = `url(${imageUrl})`;
+                        bgElement.style.opacity = '1';
+                    }, 500);
+                };
+                img.src = imageUrl;
+            }
 
-    document.getElementById('contact-close-button').addEventListener('click', function() {
-      document.getElementById('contact-overlay').classList.remove('active');
-    });
+            // Quote Management
+            setupQuotes() {
+                this.updateQuote();
+            }
 
-    // Event listeners for "Book an Appointment" form open and close
-    document.getElementById('appointment-button').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('appointment-overlay').classList.add('active');
-    });
+            async updateQuote() {
+                const wisdomElement = document.getElementById('wisdom-quote');
+                
+                try {
+                    const response = await fetch('https://api.quotable.io/random?maxLength=80');
+                    if (!response.ok) throw new Error('Failed to fetch');
+                    
+                    const data = await response.json();
+                    wisdomElement.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        wisdomElement.textContent = `"${data.content}"`;
+                        wisdomElement.style.opacity = '0.5';
+                    }, 300);
+                } catch (error) {
+                    // Keep default quote on error
+                    console.log('Quote API unavailable, using default');
+                }
+            }
 
-    document.getElementById('appointment-close-button').addEventListener('click', function() {
-      document.getElementById('appointment-overlay').classList.remove('active');
-      // Reset the appointment content to duration selection when closed
-      resetAppointmentContent();
-    });
+            // Portal Management
+            setupPortals() {
+                // Connect button
+                const connectBtn = document.getElementById('connect-btn');
+                const contactPortal = document.getElementById('contact-portal');
+                
+                connectBtn.addEventListener('click', () => {
+                    contactPortal.classList.add('portal--active');
+                });
 
-    // Function to reset appointment content to initial state
-    function resetAppointmentContent() {
-      const appointmentContent = document.getElementById('appointment-content');
-      appointmentContent.innerHTML = `
-        <h2>Select Appointment Duration</h2>
-        <button class="duration-button" data-duration="15">15 Minutes</button>
-        <button class="duration-button" data-duration="30">30 Minutes</button>
-        <button class="duration-button" data-duration="60">60 Minutes</button>
-      `;
-      addDurationButtonListeners();
-    }
+                // Schedule button
+                const scheduleBtn = document.getElementById('schedule-btn');
+                const schedulePortal = document.getElementById('schedule-portal');
+                
+                scheduleBtn.addEventListener('click', () => {
+                    schedulePortal.classList.add('portal--active');
+                    this.resetScheduleContent();
+                });
 
-    // Function to add event listeners to duration buttons
-    function addDurationButtonListeners() {
-      const durationButtons = document.querySelectorAll('.duration-button');
-      durationButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-          const duration = button.getAttribute('data-duration');
-          loadTidycalEmbed(duration);
+                // Close buttons
+                document.querySelectorAll('.portal__close').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.target.closest('.portal').classList.remove('portal--active');
+                    });
+                });
+
+                // Click outside to close
+                document.querySelectorAll('.portal').forEach(portal => {
+                    portal.addEventListener('click', (e) => {
+                        if (e.target === portal) {
+                            portal.classList.remove('portal--active');
+                        }
+                    });
+                });
+
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        document.querySelectorAll('.portal').forEach(portal => {
+                            portal.classList.remove('portal--active');
+                        });
+                    }
+                });
+
+                // Attach listeners to duration options
+                this.attachDurationListeners();
+            }
+
+            resetScheduleContent() {
+                const scheduleContent = document.getElementById('schedule-content');
+                scheduleContent.innerHTML = `
+                    <div class="duration-grid">
+                        <div class="duration-option" data-duration="15">
+                            <div class="duration-option__value">15</div>
+                            <div class="duration-option__unit">minutes</div>
+                        </div>
+                        <div class="duration-option" data-duration="30">
+                            <div class="duration-option__value">30</div>
+                            <div class="duration-option__unit">minutes</div>
+                        </div>
+                        <div class="duration-option" data-duration="60">
+                            <div class="duration-option__value">60</div>
+                            <div class="duration-option__unit">minutes</div>
+                        </div>
+                    </div>
+                `;
+                
+                this.attachDurationListeners();
+            }
+
+            attachDurationListeners() {
+                document.querySelectorAll('.duration-option').forEach(option => {
+                    option.addEventListener('click', (e) => {
+                        const duration = e.currentTarget.dataset.duration;
+                        this.loadCalendar(duration);
+                    });
+                });
+            }
+
+            loadCalendar(duration) {
+                const scheduleContent = document.getElementById('schedule-content');
+                scheduleContent.innerHTML = `
+                    <iframe src="https://tidycal.com/sgopala/${duration}-minute-meeting" 
+                            style="width:100%; height:500px; border:none;" 
+                            frameborder="0"></iframe>
+                `;
+            }
+
+            // Auto-refresh intervals
+            startIntervals() {
+                // Update background every 60 seconds
+                setInterval(() => this.updateBackground(), 60000);
+                
+                // Update quote every 60 seconds
+                setInterval(() => this.updateQuote(), 60000);
+            }
+        }
+
+        // Start application
+        document.addEventListener('DOMContentLoaded', () => {
+            new Portfolio();
         });
-      });
-    }
 
-    // Function to load TidyCal embed based on selected duration
-    function loadTidycalEmbed(duration) {
-      const appointmentContent = document.getElementById('appointment-content');
-      appointmentContent.innerHTML = `
-        <iframe class="tidycal-iframe" src="https://tidycal.com/sgopala/${duration}-minute-meeting"></iframe>
-      `;
-    }
+        // Handle viewport height on mobile (optional; retained though not used directly in CSS)
+        function setVH() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
 
-    // Initialize duration button listeners
-    addDurationButtonListeners();
-  </script>
+        setVH();
+        window.addEventListener('resize', setVH);
+
+        // Allow normal scrolling; no global preventDefault
+        document.body.addEventListener('touchmove', (e) => {
+            if (e.target.closest('.portal__body')) {
+                return;
+            }
+        }, { passive: true });
+
+        // Performance optimization - pause animations when tab is hidden
+        document.addEventListener('visibilitychange', () => {
+            const isHidden = document.hidden;
+            document.querySelectorAll('[style*="animation"]').forEach(el => {
+                el.style.animationPlayState = isHidden ? 'paused' : 'running';
+            });
+        });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gopala Subramanium",
+        "jobTitle": "CEO - Capital Markets Solutions",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Contemi Solutions"
+        },
+        "description": "Visionary CEO and Capital Markets Technology leader with 20+ years experience",
+        "url": "https://sgopala.com",
+        "sameAs": [
+            "https://linkedin.com/in/gopalasubramanium",
+            "https://twitter.com/sgopala"
+        ],
+        "email": "xxxxx",
+        "telephone": "xxxxx",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Singapore"
+        }
+    }
+    </script>
 </body>
 </html>

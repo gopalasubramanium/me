@@ -1,525 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Gopala Subramanium | CEO, Capital Markets Solution</title>
-    <meta name="description" content="CEO, Capital Markets Solution at Contemi. Lead Nova CMX, earlier Nova Post Trade. 20+ years in capital markets technology, finance, and multi‑country execution. Led Religare IPO oversubscription 160×. FinTech CFO of the Year 2019.">
-    <meta name="keywords" content="Gopala Subramanium, CEO Contemi, Nova CMX, Nova Post Trade, Capital Markets, Post Trade, Singapore, FinTech, CFO of the Year">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gopala Subramanium</title>
+<meta name="description" content="Chief Executive, Capital Markets Solutions at Contemi. I build post-trade infrastructure used by leading sell-side brokers across Asia, Australasia and Europe.">
+<meta name="author" content="Gopala Subramanium">
+<meta property="og:title" content="Gopala Subramanium">
+<meta property="og:description" content="Chief Executive, Capital Markets Solutions at Contemi. Post-trade infrastructure, quietly built.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://sgopala.com">
+<link rel="canonical" href="https://sgopala.com">
 
-    <!-- Favicons -->
-    <link rel="icon" href="../favicon/favicon-32x32.png" type="image/png">
-    <link rel="apple-touch-icon" href="../favicon/favicon-180x180.png">
-    <link rel="manifest" href="../manifest.json">
+<!-- Favicons -->
+<link rel="icon" href="../favicon/favicon-32x32.png" type="image/png">
+<link rel="apple-touch-icon" href="../favicon/favicon-180x180.png">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Typography: editorial serif + warm reading serif + functional mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe5;
+    --paper-warm: #ece5d6;
+    --ink: #14120f;
+    --ink-soft: #2a2621;
+    --ink-muted: #6b655a;
+    --rule: #cdc5b4;
+    --accent: #1a2f4a;       /* deep navy — Tata-esque */
+    --gold: #8a6a1f;         /* muted, not shiny */
+    --radius: 2px;
+  }
 
-    <style>
-        /* Reset */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14120f;
+      --paper-warm: #1c1a16;
+      --ink: #f1ead9;
+      --ink-soft: #d8d1bf;
+      --ink-muted: #8e867a;
+      --rule: #2e2a23;
+      --accent: #bfd0e4;
+      --gold: #d0ae5c;
+    }
+  }
 
-        /* Base */
-        html, body {
-            height: 100%;
-            min-height: 100%;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Background System */
-        .universe { position: fixed; inset: 0; z-index: 0; }
-        .universe__image {
-            position: absolute; inset: 0;
-            background-size: cover; background-position: center;
-            filter: blur(8px) brightness(0.3);
-            transform: scale(1.1);
-            transition: opacity 2s ease;
-        }
-        .universe__dust { position: absolute; inset: 0; background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); opacity: 0.92; }
-        .universe__stars {
-            position: absolute; inset: 0;
-            background-image:
-                radial-gradient(2px 2px at 20% 30%, white, transparent),
-                radial-gradient(2px 2px at 60% 70%, white, transparent),
-                radial-gradient(1px 1px at 50% 50%, white, transparent);
-            background-size: 200px 200px;
-            animation: drift 120s linear infinite;
-            opacity: 0.3;
-        }
-        @keyframes drift { from { transform: translateX(0); } to { transform: translateX(200px); } }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-        /* Main Layout */
-        .stage { position: relative; min-height: 100vh; display: flex; flex-direction: column; z-index: 1; color: #ffffff; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-feature-settings: "kern", "liga", "onum";
+    /* Subtle paper grain */
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(0,0,0,0.015) 0%, transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.02) 0%, transparent 45%);
+  }
 
-        /* Header Bar */
-        .apex { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent); flex-shrink: 0; }
-        .apex__identity { display: flex; align-items: center; gap: 1rem; }
-        .apex__avatar { width: 48px; height: 48px; border-radius: 24px; overflow: hidden; border: 2px solid rgba(255,255,255,0.2); flex-shrink: 0; }
-        .apex__avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .apex__credentials { display: flex; flex-direction: column; gap: 2px; }
-        .apex__name { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; }
-        .apex__role { font-size: 0.8125rem; color: rgba(255,255,255,0.6); font-weight: 300; }
+  /* Typography ----------------------------------------------------- */
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    font-variation-settings: "opsz" 120, "SOFT" 0, "WONK" 0;
+  }
 
-        .apex__metrics { display: flex; gap: 2rem; }
-        .metric { text-align: center; }
-        .metric__value { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
-        .metric__label { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  h1 {
+    font-size: clamp(2.6rem, 6.2vw, 5.25rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
 
-        /* Core Content */
-        .core { flex: 1 0 auto; display: flex; align-items: center; justify-content: center; padding: 2rem; position: relative; }
-        .core__content { max-width: 800px; width: 100%; text-align: center; }
-        .core__headline {
-            font-family: 'Crimson Text', Georgia, serif;
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: ascend 1s ease forwards;
-        }
-        @keyframes ascend { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .core__headline em { font-style: italic; color: #ffd700; font-weight: 400; }
+  h2 {
+    font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
 
-        .core__subtext {
-            font-size: 1.125rem; line-height: 1.6; color: rgba(255,255,255,0.7); font-weight: 300; font-style: italic;
-            max-width: 640px; margin: 0 auto 2rem;
-            opacity: 0; animation: ascend 1s ease 0.2s forwards;
-        }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-variation-settings: "opsz" 24;
+  }
 
-        .core__badges { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; opacity: 0; animation: ascend 1s ease 0.3s forwards; }
-        .badge { padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.02em; transition: all 0.3s ease; }
-        .badge:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
-        .badge--gold { background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1)); border-color: rgba(255,215,0,0.4); color: #ffd700; }
+  p { margin-bottom: 1.1em; color: var(--ink-soft); }
+  p:last-child { margin-bottom: 0; }
 
-        /* Action Buttons */
-        .core__actions { display: flex; gap: 1rem; justify-content: center; opacity: 0; animation: ascend 1s ease 0.4s forwards; }
-        .btn { padding: 0.875rem 2rem; font-size: 0.9375rem; font-weight: 500; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; letter-spacing: 0.01em; }
-        .btn--primary { background: #ffffff; color: #000000; }
-        .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,0.2); }
-        .btn--ghost { background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.3); }
-        .btn--ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: border-color 180ms ease, color 180ms ease;
+  }
+  a:hover { border-color: var(--accent); color: var(--accent); }
 
-        /* Foundation (Footer) */
-        .foundation { padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to top, rgba(0,0,0,0.3), transparent); flex-shrink: 0; }
-        .foundation__links { display: flex; gap: 0.75rem; }
-        .foundation__link { width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: #ffffff; text-decoration: none; transition: all 0.3s ease; font-size: 1.1rem; }
-        .foundation__link:hover { transform: translateY(-3px); opacity: 0.9; }
-        .foundation__link--linkedin { background-color: #0077b5; }
-        .foundation__link--twitter { background-color: #1da1f2; }
-        .foundation__link--facebook { background-color: #3b5998; }
-        .foundation__link--youtube { background-color: #ff0000; }
-        .foundation__link--instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+  .meta {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
 
-        .foundation__wisdom { font-family: 'Crimson Text', serif; font-style: italic; font-size: 0.9375rem; color: rgba(255,255,255,0.5); max-width: 400px; text-align: center; flex: 1; }
-        .foundation__credits { font-size: 0.75rem; color: rgba(255,255,255,0.3); display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .rule {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--rule);
+    border: 0;
+    margin: 0;
+  }
 
-        /* Modal System */
-        .portal { position: fixed; inset: 0; background: rgba(0,0,0,0.95); backdrop-filter: blur(20px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
-        .portal--active { opacity: 1; visibility: visible; }
-        .portal__box { background: #ffffff; border-radius: 16px; width: 90%; max-width: 600px; max-height: 85vh; overflow: hidden; transform: scale(0.9); transition: transform 0.3s ease; }
-        .portal--active .portal__box { transform: scale(1); }
-        .portal__header { padding: 1.5rem; border-bottom: 1px solid #e5e5e5; display: flex; justify-content: space-between; align-items: center; }
-        .portal__title { font-size: 1.25rem; font-weight: 600; color: #000000; }
-        .portal__close { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #f5f5f5; border: none; border-radius: 50%; cursor: pointer; transition: all 0.3s ease; color: #666; }
-        .portal__close:hover { background: #e5e5e5; transform: rotate(90deg); }
-        .portal__body { padding: 1.5rem; max-height: calc(85vh - 80px); overflow-y: auto; }
+  /* Layout --------------------------------------------------------- */
+  .wrap {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+  }
 
-        /* Meeting Duration Cards */
-        .duration-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-        .duration-option {
-            padding: 2rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px; text-align: center; cursor: pointer; transition: all 0.3s ease; color: white; border: 2px solid transparent;
-        }
-        .duration-option:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(102,126,234,0.4); }
-        .duration-option__value { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.25rem; }
-        .duration-option__unit { font-size: 0.875rem; opacity: 0.9; }
+  .nav {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav__brand {
+    font-family: 'Fraunces', serif;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border: 0;
+  }
+  .nav__links { display: flex; gap: 1.75rem; }
+  .nav__links a {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border: 0;
+  }
+  .nav__links a:hover { color: var(--ink); }
 
-        /* Responsive */
-        @media (max-width: 1200px) { .apex__metrics { display: none; } }
-        @media (max-width: 768px) {
-            .apex { padding: 1rem; }
-            .apex__identity { gap: 0.75rem; }
-            .apex__avatar { width: 40px; height: 40px; }
-            .apex__name { font-size: 1rem; }
-            .apex__role { font-size: 0.75rem; }
-            .core { padding: 1rem; }
-            .core__headline { font-size: 2rem; margin-bottom: 1rem; }
-            .core__subtext { font-size: 1rem; margin-bottom: 1.5rem; }
-            .core__badges { display: none; }
-            .core__actions { flex-direction: column; width: 100%; }
-            .btn { width: 100%; justify-content: center; }
-            .foundation { flex-direction: column; gap: 1rem; padding: 1rem; }
-            .foundation__links { gap: 0.5rem; }
-            .foundation__link { width: 40px; height: 40px; font-size: 1rem; }
-            .foundation__wisdom, .foundation__credits { display: none; }
-            .duration-grid { grid-template-columns: 1fr; }
-            .portal__box { width: 95%; border-radius: 12px; }
-        }
-        @media (max-height: 900px) {
-            .apex { padding: 1rem 1.5rem; }
-            .core { padding: 1.5rem 1.5rem; }
-            .foundation { padding: 1rem 1.5rem; }
-            .core__headline { font-size: clamp(2.2rem, 6vw, 3.2rem); margin-bottom: 1.1rem; }
-            .core__subtext { margin-bottom: 1.25rem; }
-            .core__badges { margin-bottom: 1.75rem; }
-        }
-        @media (max-height: 800px) {
-            .apex { padding: 0.9rem 1.25rem; }
-            .core { padding: 1.25rem 1.25rem; }
-            .foundation { padding: 0.9rem 1.25rem; }
-            .core__headline { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 0.9rem; }
-            .core__subtext { font-size: 1rem; margin-bottom: 1rem; }
-            .core__badges { display: none; }
-        }
-        @media (max-height: 600px) {
-            .apex { padding: 0.75rem 1.5rem; }
-            .core__headline { font-size: 2rem; }
-            .core__subtext { display: none; }
-            .foundation { padding: 0.75rem 1.5rem; }
-        }
+  /* Hero ----------------------------------------------------------- */
+  .hero {
+    padding: clamp(4rem, 12vh, 9rem) 0 clamp(3rem, 8vh, 6rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+  .hero__eyebrow { margin-bottom: 1.5rem; }
+  .hero__title { max-width: 20ch; margin-bottom: 2rem; }
+  .hero__lede {
+    max-width: 42rem;
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+  .hero__lede strong { color: var(--ink); font-weight: 500; }
+  .hero__status {
+    margin-top: 2.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 2rem;
+    align-items: baseline;
+  }
+  .hero__status .meta + span {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .hero__status .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2d8659;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
 
-        /* Accessibility */
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
-        *:focus-visible { outline: 2px solid #ffd700; outline-offset: 2px; }
+  /* Sections ------------------------------------------------------- */
+  section.block {
+    padding: clamp(3.5rem, 8vh, 6rem) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .block__head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  @media (min-width: 780px) {
+    .block__head { grid-template-columns: 10rem 1fr; gap: 3rem; align-items: baseline; }
+  }
 
-        /* Loading */
-        .loading { opacity: 0.5; pointer-events: none; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem 3rem;
+  }
+  @media (min-width: 780px) {
+    .two-col { grid-template-columns: 10rem 1fr; }
+  }
 
-        /* Custom Scrollbar for portal */
-        .portal__body::-webkit-scrollbar { width: 8px; }
-        .portal__body::-webkit-scrollbar-track { background: #f5f5f5; }
-        .portal__body::-webkit-scrollbar-thumb { background: #d0d0d0; border-radius: 4px; }
-        .portal__body::-webkit-scrollbar-thumb:hover { background: #b0b0b0; }
+  .prose { max-width: 44rem; }
+  .prose p + p { margin-top: 0; }
 
-        /* Print */
-        @media print {
-            body { background: white; color: black; }
-            .universe, .btn, .foundation__links { display: none; }
-            .stage { min-height: auto; }
-        }
-    </style>
+  /* Now section ---------------------------------------------------- */
+  .now-list { list-style: none; }
+  .now-list li {
+    padding: 1rem 0;
+    border-top: 1px dashed var(--rule);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+  @media (min-width: 680px) {
+    .now-list li { grid-template-columns: 11rem 1fr; gap: 2rem; align-items: baseline; }
+  }
+  .now-list li:last-child { border-bottom: 1px dashed var(--rule); }
+  .now-list .when { color: var(--ink-muted); }
+
+  /* Work ----------------------------------------------------------- */
+  .work-item { max-width: 44rem; }
+  .work-item + .work-item { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--rule); }
+  .work-item h3 { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 0.25rem; letter-spacing: -0.015em; }
+  .work-item .tenure { margin-bottom: 1.25rem; }
+  .work-item ul { list-style: none; margin-top: 0.75rem; }
+  .work-item ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--ink-soft);
+  }
+  .work-item ul li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--ink-muted);
+  }
+
+  /* Clients ribbon */
+  .clients {
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .clients span {
+    font-family: 'Fraunces', serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink-soft);
+    font-variation-settings: "opsz" 24;
+  }
+
+  /* Writing -------------------------------------------------------- */
+  .writing { list-style: none; max-width: 46rem; }
+  .writing li {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem 2rem;
+  }
+  @media (min-width: 680px) {
+    .writing li { grid-template-columns: 7rem 1fr auto; align-items: baseline; }
+  }
+  .writing li:last-child { border-bottom: 1px solid var(--rule); }
+  .writing .title { font-family: 'Fraunces', serif; font-size: 1.125rem; font-weight: 400; color: var(--ink); }
+  .writing .venue { color: var(--ink-muted); font-style: italic; }
+  .writing a { border: 0; }
+  .writing a:hover .title { color: var(--accent); }
+
+  /* Background grid ------------------------------------------------- */
+  .bg-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  @media (min-width: 680px) {
+    .bg-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 3rem; }
+  }
+  .bg-item .label { margin-bottom: 0.35rem; }
+  .bg-item .value { font-family: 'Fraunces', serif; font-size: 1.125rem; color: var(--ink); line-height: 1.35; font-variation-settings: "opsz" 24; }
+  .bg-item .note { color: var(--ink-muted); font-size: 0.95rem; margin-top: 0.15rem; }
+
+  /* Coda / philosophy ---------------------------------------------- */
+  .coda {
+    padding: clamp(5rem, 12vh, 8rem) 0;
+    border-top: 1px solid var(--rule);
+    text-align: left;
+  }
+  .coda blockquote {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    max-width: 38ch;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .coda blockquote::before { content: "\201C"; color: var(--gold); margin-right: 0.1em; }
+  .coda blockquote::after { content: "\201D"; color: var(--gold); }
+  .coda cite {
+    display: block;
+    margin-top: 1.5rem;
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* Contact -------------------------------------------------------- */
+  .contact {
+    padding: clamp(4rem, 8vh, 6rem) 0 clamp(3rem, 6vh, 4.5rem);
+    border-top: 1px solid var(--rule);
+  }
+  .contact h2 { margin-bottom: 2rem; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 44rem;
+  }
+  @media (min-width: 680px) {
+    .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; }
+  }
+  .contact-item .label { margin-bottom: 0.35rem; }
+  .contact-item .value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-variation-settings: "opsz" 36;
+  }
+  .contact-item a { color: var(--ink); }
+
+  /* Footer --------------------------------------------------------- */
+  footer.foot {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+  }
+  footer.foot span { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); }
+  footer.foot a { border: 0; color: var(--ink-muted); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+  footer.foot a:hover { color: var(--ink); }
+  footer.foot .dot-sep { color: var(--rule); margin: 0 0.5rem; }
+
+  /* Reveal animation (respects prefers-reduced-motion) ------------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 900ms cubic-bezier(0.2, 0.7, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { animation: none !important; }
+  }
+
+  /* Selection & focus */
+  ::selection { background: var(--ink); color: var(--paper); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 1px; }
+
+  /* Print ---------------------------------------------------------- */
+  @media print {
+    body { background: white; color: black; }
+    .nav__links, .contact-item a[href*="tidycal"] { display: none; }
+    section.block, .coda, .contact { border-color: #ddd; }
+  }
+</style>
 </head>
 <body>
-    <!-- Background Universe -->
-    <div class="universe">
-        <div class="universe__image" id="background-image"></div>
-        <div class="universe__dust"></div>
-        <div class="universe__stars"></div>
+
+<div class="wrap">
+
+  <!-- NAV ------------------------------------------------------------ -->
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="#top">Gopala&nbsp;Subramanium</a>
+    <div class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO ----------------------------------------------------------- -->
+  <header class="hero" id="top">
+    <div>
+      <div class="meta hero__eyebrow reveal">Singapore · Est. 2003</div>
+      <h1 class="hero__title reveal">
+        I build the <em>plumbing</em> of capital markets.
+      </h1>
+      <p class="hero__lede reveal">
+        I am Chief Executive of the <strong>Capital Markets Solutions</strong> business at Contemi, where we operate <strong>Nova CMX</strong> — a multi-asset, multi-market post-trade platform used by Tier-I sell-side brokers, bank brokerages, and investment banks across South-East Asia, Australia and New Zealand, the UK, and Europe.
+      </p>
+      <p class="hero__lede reveal" style="margin-top:1.1em;">
+        My work is unglamorous by design: clearing, settlement, risk control, compliance, resilience. The systems no one sees until they stop working. I try to make them quieter, faster, and harder to break.
+      </p>
+
+      <div class="hero__status reveal">
+        <span class="meta"><span class="dot"></span>Currently</span>
+        <span>Leading the Nova CMX platform roadmap &nbsp;·&nbsp; Based in Singapore</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NOW ------------------------------------------------------------ -->
+  <section class="block" id="now">
+    <div class="block__head">
+      <span class="meta reveal">Now</span>
+      <h2 class="reveal">What I&rsquo;m working on, this quarter.</h2>
     </div>
 
-    <!-- Main Stage -->
-    <div class="stage">
-        <!-- Header -->
-        <header class="apex">
-            <div class="apex__identity">
-                <div class="apex__avatar">
-                    <img src="../gs.jpg" alt="Gopala Subramanium" width="48" height="48">
-                </div>
-                <div class="apex__credentials">
-                    <div class="apex__name">Gopala Subramanium</div>
-                    <div class="apex__role">CEO, Capital Markets Solution | Nova CMX, Contemi</div>
-                </div>
-            </div>
-            <div class="apex__metrics">
-                <div class="metric">
-                    <div class="metric__value">20+</div>
-                    <div class="metric__label">Years</div>
-                </div>
-                <div class="metric">
-                    <div class="metric__value">160×</div>
-                    <div class="metric__label">IPO Success</div>
-                </div>
-                <div class="metric">
-                    <div class="metric__value">12×</div>
-                    <div class="metric__label">EBITDA</div>
-                </div>
-            </div>
-        </header>
+    <ul class="now-list prose">
+      <li class="reveal">
+        <span class="when">Platform</span>
+        <span>Evolving <strong>Nova CMX</strong> from a post-trade platform into a full capital-markets operating system — one ledger, one rules engine, one view of risk across cash equities, derivatives, and digital assets.</span>
+      </li>
+      <li class="reveal">
+        <span class="when">Market</span>
+        <span>Preparing Asia-Pacific clients for <strong>T+1 settlement</strong> and the operational compression that comes with it. Most of the real work is in the boring places: reconciliations, exception queues, margin recalls.</span>
+      </li>
+      <li class="reveal">
+        <span class="when">Controls</span>
+        <span>Standing up AI-assisted test harnesses and RPA frameworks. <strong>SOC 2 Type II</strong> readiness. The goal is fewer humans doing low-judgment work, and more humans doing the judgment work well.</span>
+      </li>
+      <li class="reveal">
+        <span class="when">People</span>
+        <span>Hiring engineers and domain experts in Singapore, Oslo, and Bangalore. If you have lived inside a brokerage back office, we should talk.</span>
+      </li>
+    </ul>
+  </section>
 
-        <!-- Core Content -->
-        <main class="core">
-            <div class="core__content">
-                <h1 class="core__headline">
-                    Building strong <em>capital markets solutions</em><br>
-                    through disciplined technology leadership...
-                </h1>
-
-                <p class="core__subtext">
-                    Lead Nova CMX, earlier Nova Post Trade. Guide a multi asset and multi market post trade platform used by Tier I sell side brokerages, bank brokerages, and investment banks across SEA, ANZ, the UK, and Europe. Focus on scale, resilience, risk control, and measured expansion.
-                </p>
-
-                <div class="core__badges">
-                    <span class="badge badge--gold">🏆 FinTech CFO of the Year 2019</span>
-                    <span class="badge">Religare IPO 160×</span>
-                    <span class="badge">IIM Calcutta</span>
-                    <span class="badge">Executive MBA</span>
-                </div>
-
-                <div class="core__actions">
-                    <button class="btn btn--primary" id="connect-btn">
-                        <i class="fas fa-envelope"></i>
-                        Connect
-                    </button>
-                    <button class="btn btn--ghost" id="schedule-btn">
-                        <i class="fas fa-calendar"></i>
-                        Schedule Time
-                    </button>
-                </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="foundation">
-            <div class="foundation__links">
-                <a href="https://linkedin.com/in/gopalasubramanium" class="foundation__link foundation__link--linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com/sgopala" class="foundation__link foundation__link--twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com/gopala.subramanium" class="foundation__link foundation__link--facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://youtube.com/@sgopala" class="foundation__link foundation__link--youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://instagram.com/gopalas" class="foundation__link foundation__link--instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-
-            <div class="foundation__wisdom" id="wisdom-quote">
-                "Live to make others live better..."
-            </div>
-
-            <div class="foundation__credits">
-                <span>Singapore</span>
-            </div>
-        </footer>
+  <!-- WORK ----------------------------------------------------------- -->
+  <section class="block" id="work">
+    <div class="block__head">
+      <span class="meta reveal">Work</span>
+      <h2 class="reveal">What I&rsquo;ve built, and what it has done.</h2>
     </div>
 
-    <!-- Contact Portal -->
-    <div class="portal" id="contact-portal">
-        <div class="portal__box">
-            <div class="portal__header">
-                <h2 class="portal__title">Let's Connect</h2>
-                <button class="portal__close" aria-label="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="portal__body">
-                <iframe src="https://www.powr.io/form-builder/u/dad1eeeb_1597496883#platform=iframe"
-                        style="width:100%; height:500px; border:none;"
-                        frameborder="0"></iframe>
-            </div>
-        </div>
+    <div class="work-item reveal">
+      <h3>Contemi &mdash; Capital Markets Solutions</h3>
+      <div class="meta tenure">Chief Executive, CMS &nbsp;·&nbsp; 2020 &mdash; Present</div>
+      <p>I took on a stagnant business unit and rebuilt it into the growth engine of the group. The platform had good bones. It needed direction, discipline, and a commercial backbone.</p>
+      <ul>
+        <li>Doubled revenue and multiplied EBITDA twelvefold within three years.</li>
+        <li>Turned around three businesses &mdash; Dion India, Wealth Management, and Nova &mdash; from loss-making or flat to profitable and compounding.</li>
+        <li>Extended the platform into ANZ and the UK while deepening the Asian footprint.</li>
+        <li>Embedded AI-assisted QA, RPA, and SOC 2 Type II readiness into the delivery stack.</li>
+      </ul>
+      <div class="clients" aria-label="Representative clients">
+        <span>CGS International</span>
+        <span>CIMB</span>
+        <span>OCBC</span>
+        <span>UBS</span>
+        <span>JPMorgan</span>
+        <span>Citi</span>
+        <span>ASB</span>
+        <span>JBWere</span>
+        <span>CMC Markets</span>
+        <span>Canaccord Genuity</span>
+      </div>
     </div>
 
-    <!-- Schedule Portal -->
-    <div class="portal" id="schedule-portal">
-        <div class="portal__box">
-            <div class="portal__header">
-                <h2 class="portal__title">Schedule a Meeting</h2>
-                <button class="portal__close" aria-label="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="portal__body" id="schedule-content">
-                <div class="duration-grid">
-                    <div class="duration-option" data-duration="15">
-                        <div class="duration-option__value">15</div>
-                        <div class="duration-option__unit">minutes</div>
-                    </div>
-                    <div class="duration-option" data-duration="30">
-                        <div class="duration-option__value">30</div>
-                        <div class="duration-option__unit">minutes</div>
-                    </div>
-                    <div class="duration-option" data-duration="60">
-                        <div class="duration-option__value">60</div>
-                        <div class="duration-option__unit">minutes</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="work-item reveal">
+      <h3>Dion Global Solutions</h3>
+      <div class="meta tenure">Global Chief Financial Officer &nbsp;·&nbsp; 2016 &mdash; 2019</div>
+      <p>Returned the India operation to profitability inside two years. Secured over US$200m of global funding, brought IndAS, GST, and cross-border tax discipline into the group, and helped set the stage for what came next.</p>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        // Initialization
-        class Portfolio {
-            constructor() { this.init(); }
-            init() { this.setupBackground(); this.setupQuotes(); this.setupPortals(); this.startIntervals(); }
+    <div class="work-item reveal">
+      <h3>Religare</h3>
+      <div class="meta tenure">Finance & Business Intelligence Leadership &nbsp;·&nbsp; 2004 &mdash; 2016</div>
+      <p>Grew up inside one of India&rsquo;s largest non-bank financial groups. Core member of the Religare Enterprises IPO leadership team &mdash; the offering was oversubscribed <strong>160&times; overall, 93.5&times; in retail</strong>. Implemented Oracle Hyperion and EBS across the group, and ran financial planning and analysis for the retail brokerage.</p>
+    </div>
+  </section>
 
-            // Background Management
-            setupBackground() { this.updateBackground(); }
-            updateBackground() {
-                const bgElement = document.getElementById('background-image');
-                const seed = Date.now();
-                const imageUrl = `https://picsum.photos/1920/1080?random=${seed}`;
-                bgElement.style.opacity = '0';
-                const img = new Image();
-                img.onload = () => {
-                    setTimeout(() => {
-                        bgElement.style.backgroundImage = `url(${imageUrl})`;
-                        bgElement.style.opacity = '1';
-                    }, 500);
-                };
-                img.src = imageUrl;
-            }
+  <!-- WRITING & SPEAKING --------------------------------------------- -->
+  <section class="block" id="writing">
+    <div class="block__head">
+      <span class="meta reveal">Writing & Speaking</span>
+      <h2 class="reveal">Selected thinking, in public.</h2>
+    </div>
 
-            // Quote Management
-            setupQuotes() { this.updateQuote(); }
-            async updateQuote() {
-                const wisdomElement = document.getElementById('wisdom-quote');
-                try {
-                    const response = await fetch('https://api.quotable.io/random?maxLength=80');
-                    if (!response.ok) throw new Error('Failed to fetch');
-                    const data = await response.json();
-                    wisdomElement.style.opacity = '0';
-                    setTimeout(() => {
-                        wisdomElement.textContent = `"${data.content}"`;
-                        wisdomElement.style.opacity = '0.5';
-                    }, 300);
-                } catch (error) {
-                    // Keep default quote on error
-                    console.log('Quote API unavailable, using default');
-                }
-            }
+    <ul class="writing">
+      <li class="reveal">
+        <span class="meta">2025 · Essay</span>
+        <a href="#">
+          <div class="title">The Impact of T+1 Settlement on Post-Trade Operations</div>
+          <div class="venue">LinkedIn &middot; long read</div>
+        </a>
+        <span class="meta">Read</span>
+      </li>
+      <li class="reveal">
+        <span class="meta">2025 · Essay</span>
+        <a href="#">
+          <div class="title">Fractional Trading: Malaysia&rsquo;s Exciting Step Forward</div>
+          <div class="venue">LinkedIn &middot; market commentary</div>
+        </a>
+        <span class="meta">Read</span>
+      </li>
+      <li class="reveal">
+        <span class="meta">2025 · Keynote</span>
+        <a href="#">
+          <div class="title">Keynote &mdash; Stockbroking Ecosystem Day</div>
+          <div class="venue">Bursa Malaysia, Kuala Lumpur</div>
+        </a>
+        <span class="meta">Link</span>
+      </li>
+      <li class="reveal">
+        <span class="meta">2025 · Panel</span>
+        <a href="#">
+          <div class="title">AI &amp; Digital Assets in Capital Markets</div>
+          <div class="venue">Risk.net, Sydney</div>
+        </a>
+        <span class="meta">Link</span>
+      </li>
+    </ul>
+  </section>
 
-            // Portal Management
-            setupPortals() {
-                const connectBtn = document.getElementById('connect-btn');
-                const contactPortal = document.getElementById('contact-portal');
-                connectBtn.addEventListener('click', () => { contactPortal.classList.add('portal--active'); });
+  <!-- BACKGROUND ----------------------------------------------------- -->
+  <section class="block" id="background">
+    <div class="block__head">
+      <span class="meta reveal">Background</span>
+      <h2 class="reveal">Short form.</h2>
+    </div>
 
-                const scheduleBtn = document.getElementById('schedule-btn');
-                const schedulePortal = document.getElementById('schedule-portal');
-                scheduleBtn.addEventListener('click', () => {
-                    schedulePortal.classList.add('portal--active');
-                    this.resetScheduleContent();
-                });
+    <div class="bg-grid prose">
+      <div class="bg-item reveal">
+        <div class="meta label">Education</div>
+        <div class="value">Indian Institute of Management, Calcutta</div>
+        <div class="note">Advanced Management Programme &mdash; FinTech &amp; Financial Blockchain, 2024</div>
+      </div>
+      <div class="bg-item reveal">
+        <div class="meta label">Education</div>
+        <div class="value">S.&thinsp;P. Jain School of Global Management</div>
+        <div class="note">Executive MBA &mdash; Dubai, Mumbai, Singapore, Sydney. 2023.</div>
+      </div>
+      <div class="bg-item reveal">
+        <div class="meta label">Education</div>
+        <div class="value">The Institute of Chartered Accountants of India</div>
+        <div class="note">Articled training &amp; professional certification, 2004</div>
+      </div>
+      <div class="bg-item reveal">
+        <div class="meta label">Recognition</div>
+        <div class="value">FinTech CFO of the Year, 2019</div>
+        <div class="note">Acquisition International &mdash; South Asia.</div>
+      </div>
+      <div class="bg-item reveal">
+        <div class="meta label">Board</div>
+        <div class="value">Singapore Institute of Directors</div>
+        <div class="note">Senior Accredited Director.</div>
+      </div>
+      <div class="bg-item reveal">
+        <div class="meta label">Outside the office</div>
+        <div class="value">Photography, music, long-form reading, code.</div>
+        <div class="note">Two decades of small, patient compounding.</div>
+      </div>
+    </div>
+  </section>
 
-                document.querySelectorAll('.portal__close').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        e.target.closest('.portal').classList.remove('portal--active');
-                    });
-                });
+  <!-- CODA ----------------------------------------------------------- -->
+  <aside class="coda reveal">
+    <blockquote>
+      Every challenge is an opportunity to create enduring value &mdash; through clarity, collaboration, and composure.
+    </blockquote>
+    <cite>&mdash; Working principle</cite>
+  </aside>
 
-                document.querySelectorAll('.portal').forEach(portal => {
-                    portal.addEventListener('click', (e) => { if (e.target === portal) portal.classList.remove('portal--active'); });
-                });
+  <!-- CONTACT -------------------------------------------------------- -->
+  <section class="contact" id="contact">
+    <div class="block__head">
+      <span class="meta reveal">Contact</span>
+      <h2 class="reveal">Say hello.</h2>
+    </div>
+    <p class="prose reveal" style="margin-bottom:2rem;">
+      The door is open to operators in post-trade, brokerage leadership, and capital-markets technology. For media and speaking, please use the same email and mention the outlet.
+    </p>
 
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        document.querySelectorAll('.portal').forEach(portal => portal.classList.remove('portal--active'));
-                    }
-                });
+    <div class="contact-grid">
+      <div class="contact-item reveal">
+        <div class="meta label">Email</div>
+        <div class="value"><a href="mailto:mailme@sgopala.com">mailme@sgopala.com</a></div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="meta label">Book time</div>
+        <div class="value"><a href="https://tidycal.com/sgopala" target="_blank" rel="noopener">tidycal.com/sgopala</a></div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="meta label">LinkedIn</div>
+        <div class="value"><a href="https://linkedin.com/in/gopalasubramanium" target="_blank" rel="noopener">/in/gopalasubramanium</a></div>
+      </div>
+      <div class="contact-item reveal">
+        <div class="meta label">Location</div>
+        <div class="value">Singapore</div>
+      </div>
+    </div>
+  </section>
 
-                this.attachDurationListeners();
-            }
+  <!-- FOOTER --------------------------------------------------------- -->
+  <footer class="foot">
+    <span>&copy; <span id="yr"></span> Gopala Subramanium</span>
+    <span>
+      <a href="mailto:mailme@sgopala.com">Email</a>
+      <span class="dot-sep">·</span>
+      <a href="https://linkedin.com/in/gopalasubramanium" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="dot-sep">·</span>
+      <a href="https://tidycal.com/sgopala" target="_blank" rel="noopener">Schedule</a>
+    </span>
+  </footer>
+</div>
 
-            resetScheduleContent() {
-                const scheduleContent = document.getElementById('schedule-content');
-                scheduleContent.innerHTML = `
-                    <div class="duration-grid">
-                        <div class="duration-option" data-duration="15">
-                            <div class="duration-option__value">15</div>
-                            <div class="duration-option__unit">minutes</div>
-                        </div>
-                        <div class="duration-option" data-duration="30">
-                            <div class="duration-option__value">30</div>
-                            <div class="duration-option__unit">minutes</div>
-                        </div>
-                        <div class="duration-option" data-duration="60">
-                            <div class="duration-option__value">60</div>
-                            <div class="duration-option__unit">minutes</div>
-                        </div>
-                    </div>
-                `;
-                this.attachDurationListeners();
-            }
+<script>
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-            attachDurationListeners() {
-                document.querySelectorAll('.duration-option').forEach(option => {
-                    option.addEventListener('click', (e) => {
-                        const duration = e.currentTarget.dataset.duration;
-                        this.loadCalendar(duration);
-                    });
-                });
-            }
-
-            loadCalendar(duration) {
-                const scheduleContent = document.getElementById('schedule-content');
-                scheduleContent.innerHTML = `
-                    <iframe src="https://tidycal.com/sgopala/${duration}-minute-meeting"
-                            style="width:100%; height:500px; border:none;"
-                            frameborder="0"></iframe>
-                `;
-            }
-
-            // Auto-refresh intervals
-            startIntervals() {
-                setInterval(() => this.updateBackground(), 60000);
-                setInterval(() => this.updateQuote(), 60000);
-            }
+  // Reveal-on-scroll (respects prefers-reduced-motion)
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+  }
+</script>
 
-        document.addEventListener('DOMContentLoaded', () => { new Portfolio(); });
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gopala Subramanium",
+  "jobTitle": "Chief Executive, Capital Markets Solutions",
+  "worksFor": { "@type": "Organization", "name": "Contemi Solutions" },
+  "description": "Chief Executive of Capital Markets Solutions at Contemi. Operates Nova CMX, a multi-asset, multi-market post-trade platform used by leading sell-side brokers across SEA, ANZ, the UK, and Europe.",
+  "url": "https://sgopala.com",
+  "email": "mailto:mailme@sgopala.com",
+  "sameAs": [
+    "https://linkedin.com/in/gopalasubramanium"
+  ],
+  "address": { "@type": "PostalAddress", "addressCountry": "Singapore" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Indian Institute of Management, Calcutta" },
+    { "@type": "CollegeOrUniversity", "name": "S. P. Jain School of Global Management" },
+    { "@type": "CollegeOrUniversity", "name": "The Institute of Chartered Accountants of India" }
+  ]
+}
+</script>
 
-        // Viewport height helper
-        function setVH() {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        setVH();
-        window.addEventListener('resize', setVH);
-
-        // Allow normal scrolling in portals
-        document.body.addEventListener('touchmove', (e) => {
-            if (e.target.closest('.portal__body')) return;
-        }, { passive: true });
-
-        // Pause animations on tab hide
-        document.addEventListener('visibilitychange', () => {
-            const isHidden = document.hidden;
-            document.querySelectorAll('[style*="animation"]').forEach(el => {
-                el.style.animationPlayState = isHidden ? 'paused' : 'running';
-            });
-        });
-    </script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gopala Subramanium",
-        "jobTitle": "CEO, Capital Markets Solution",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Contemi Solutions"
-        },
-        "description": "CEO for Capital Markets Solution at Contemi. Lead global strategy, growth, and operational performance of Nova CMX, earlier Nova Post Trade. Focus on scale, resilience, risk control, and measured expansion.",
-        "url": "https://sgopala.com",
-        "sameAs": [
-            "https://linkedin.com/in/gopalasubramanium",
-            "https://twitter.com/sgopala"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "Singapore"
-        }
-    }
-    </script>
 </body>
 </html>
-
-
-
